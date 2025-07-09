@@ -4,6 +4,7 @@ services:
   name: major-project
   env: node
   plan: free
+  rootDir: .
   buildCommand: npm install
   startCommand: node index.js
   envVars:

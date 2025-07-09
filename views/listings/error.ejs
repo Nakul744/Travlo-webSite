@@ -1,0 +1,11 @@
+<% layout("layout/boilerplate.ejs") %>
+
+<div class="row mt-5">
+  <div class="alert alert-danger col-6 offset-3 text-center" role="alert">
+    <h4 class="alert-heading">Oops! Something went wrong</h4>
+    <hr>
+    <p><strong>Status:</strong> <%= err.statusCode || 500 %></p>
+    <p><strong>Message:</strong> <%= err.message || "Unexpected error occurred." %></p>
+    <a href="/listing" class="btn btn-primary mt-3">Back to Listings</a>
+  </div>
+</div>

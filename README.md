@@ -1,4 +1,4 @@
-<img width="1887" height="986" alt="image" src="https://github.com/user-attachments/assets/d2b33a00-e447-4c78-990b-ecce9f14470d" /># 🌍 Travlo
+
 
 **Travlo** is a full-stack travel accommodation listing web app, inspired by Airbnb. It allows users to explore listings, add their own stays, review other listings, and manage user accounts.
 

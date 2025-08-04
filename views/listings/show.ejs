@@ -1,6 +1,5 @@
 <% layout("layout/boilerplate") %>
 
-
 <div class="container my-5" enctype="multipart/form-data">
     <!-- Title -->
     <h2 class="text-center mb-4"><%= idlisting.title %></h2>
@@ -45,7 +44,7 @@
         <form action="/listing/<%= idlisting._id %>/review" method="POST" class="needs-validation" novalidate>
             <!-- Star Rating -->
             <fieldset class="starability-slot">
-                <input type="radio" id="no-rate" class="input-no-rate" name="review[rating]" value="0" checked aria-label="No rating." />
+                <input type="radio" id="no-rate" class="input-no-rate" name="review[rating]" value="0" aria-label="No rating." />
                 <input type="radio" id="first-rate1" name="review[rating]" value="1" />
                 <label for="first-rate1" title="Terrible">1 star</label>
                 <input type="radio" id="first-rate2" name="review[rating]" value="2" />
@@ -54,7 +53,7 @@
                 <label for="first-rate3" title="Average">3 stars</label>
                 <input type="radio" id="first-rate4" name="review[rating]" value="4" />
                 <label for="first-rate4" title="Very good">4 stars</label>
-                <input type="radio" id="first-rate5" name="review[rating]" value="5" />
+                <input type="radio" id="first-rate5" name="review[rating]" value="5" checked />
                 <label for="first-rate5" title="Amazing">5 stars</label>
             </fieldset>
 
@@ -71,10 +70,8 @@
     <% } %>
     <hr>
 
-
-    <% if(idlisting.review.length>0){ %>
+    <% if(idlisting.review.length > 0){ %>
     <!-- All Reviews -->
-
     <p style="font-size: 20px;"><b>All Reviews</b></p>
 
     <div class="container my-4">
@@ -102,26 +99,17 @@
     <div class="mb-4">
         <h3>locations</h3>
         <div id='map' style='height: 400px; width: 1000px;'></div>
-       
-     
-
     </div>
-
-
-
-  
-
-    
 </div>
 
-   <script>
-	// TO MAKE THE MAP APPEAR YOU MUST
-	// ADD YOUR ACCESS TOKEN FROM
-	// https://account.mapbox.com
-	mapboxgl.accessToken = 'pk.eyJ1IjoiaXRzc2FyYW5oZXJlIiwiYSI6ImNsd3B3aDFybjFodTMyaXJ6cGQxeWdwYzcifQ.4HPJRlRvgTdHaXXTDQEWCg';
+<script>
+    // TO MAKE THE MAP APPEAR YOU MUST
+    // ADD YOUR ACCESS TOKEN FROM
+    // https://account.mapbox.com
+    mapboxgl.accessToken = 'pk.eyJ1IjoiaXRzc2FyYW5oZXJlIiwiYSI6ImNsd3B3aDFybjFodTMyaXJ6cGQxeWdwYzcifQ.4HPJRlRvgTdHaXXTDQEWCg';
     const map = new mapboxgl.Map({
         container: 'map', // container ID
-        center: [ 77.1232, 28.3650], // starting position [lng, lat]. Note that lat must be set between -90 and 90
+        center: [77.1232, 28.3650], // starting position [lng, lat]
         zoom: 9 // starting zoom
     });
- </script>
+</script>

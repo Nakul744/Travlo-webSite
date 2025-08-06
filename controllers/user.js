@@ -40,5 +40,3 @@ module.exports.logoutRoute=(req, res, next) => {
         res.redirect("/listing");
     });
 }
-
-

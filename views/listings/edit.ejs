@@ -50,4 +50,56 @@
              <button type="submit" class="btn btn-primary"  style="background-color: rgb(212, 44, 44) ; color: white; margin: 0 0 30px 0;">Save</button>
         </div>
 </form> 
+    <% layout("layout/boilerplate")%> 
+
+<div style=" margin: 20px 0 20px 210px; "> 
+            <h2> <b>Edit Listing</b> </h3>
+</div>
+        <form  action="/listing/<%= editlisting._id %>?_method=PUT" method="POST" class="needs-validation" novalidate enctype="multipart/form-data">
+          <div class="col-8 offset-2">
+            <div class="mb-3">
+               <label for="exampleInputEmail1" class="form-label">Edit Title.</label>
+                <input type="text" class="form-control"  name="listing[title]" value="<%= editlisting.title %>" required >
+                <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                     Please Enter title
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Edit Description.</label>
+                <textarea name="listing[description]" class="form-control" placeholder="Enter description" required><%= editlisting.description %></textarea>
+                <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                     Please Enter Description
+                </div>
+            </div>
+            <div class="mb-3">
+               <label  class="form-label" for="image">Upload new Image.</label>
+                <input type="file" class="form-control" name="listing[image]"    >
+              
+            </div>
+             <div class="mb-3">
+               <label for="exampleInputEmail1" class="form-label">Edit Price.</label>
+                <input type="number" class="form-control" name="listing[price]" value="<%= editlisting.price %>"  required>
+                 <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                   Please Enter Price
+                </div>
+            </div>
+             <div class="mb-3">
+               <label for="exampleInputEmail1" class="form-label">Edit Country.</label>
+                <input type="text" class="form-control" name="listing[country]" value="<%= editlisting.country %>" required>
+                <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                  Please Enter Country
+                 </div>
+            </div>
+            <div class="mb-3">
+               <label for="exampleInputEmail1" class="form-label">Edit Location.</label>
+                <input type="text" class="form-control" name="listing[location]" value="<%= editlisting.location%>" required>
+                <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                  Please Enter Location
+                  </div>
+            </div>
+
+            
+             <button type="submit" class="btn btn-primary"  style="background-color: rgb(212, 44, 44) ; color: white; margin: 0 0 30px 0;">Save</button>
+        </div>
+</form> 
     
